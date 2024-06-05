@@ -1,4 +1,3 @@
-// src/components/ShoppingCart.js
 import React from 'react';
 import { Container, Table, Button, Form } from 'react-bootstrap';
 
@@ -9,7 +8,9 @@ function ShoppingCart({ cart, updateQuantity, removeFromCart }) {
 
   return (
     <Container>
-      <h1 className="my-4">Shopping Cart</h1>
+      <div className="my-4">
+      <h1 className="products"> Shopping Cart</h1>
+      </div>
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -39,7 +40,7 @@ function ShoppingCart({ cart, updateQuantity, removeFromCart }) {
         </tbody>
       </Table>
       <h2>Total: ${getTotal()}</h2>
-      <Button variant="success" onClick={() => alert('Purchase Finalized!')}>Finalize Purchase</Button>
+      <Button variant="success" onClick={() => alert('Purchase Finalized! Proceed to Checkout?')}>Checkout</Button>
     </Container>
   );
 }
